@@ -24,7 +24,7 @@ function App() {
       default:
         break;
     }
-  };
+  }
   const handleClick = () => {
     let newStep = currentStep;
     newStep += 1;
