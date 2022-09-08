@@ -27,7 +27,7 @@ function Stepper({ steps, currentStep }) {
           completed: false,
         };
       }
-      count++;
+      count += 1;
     }
     return newSteps;
   };

@@ -11,22 +11,26 @@ function Welcome() {
       </section>
       <form className="space-y-4">
         <div className="form-control space-y-1">
-          <label htmlFor="name text-[#4e586c]">Full Name</label>
-          <input
-            id="name"
-            type="text"
-            className="input placeholder-gray-500"
-            placeholder="Steve Jobs"
-          />
+          <label htmlFor="name text-[#4e586c]">
+            Full Name
+            <input
+              id="name"
+              type="text"
+              className="input placeholder-gray-500"
+              placeholder="Steve Jobs"
+            />
+          </label>
         </div>
         <div className="form-control space-y-1">
-          <label htmlFor="display_name text-[#4e586c]">Display Name</label>
-          <input
-            id="display_name"
-            type="text"
-            className="input placeholder-gray-500"
-            placeholder="Steve"
-          />
+          <label htmlFor="display_name text-[#4e586c]">
+            Display Name
+            <input
+              id="display_name"
+              type="text"
+              className="input placeholder-gray-500"
+              placeholder="Steve"
+            />
+          </label>
         </div>
       </form>
     </>
