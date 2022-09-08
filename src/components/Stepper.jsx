@@ -5,8 +5,8 @@ import Proptypes from 'prop-types';
 function Stepper({ steps, currentStep }) {
   const [newStep, setNewStep] = useState([]);
   const stepRef = useRef();
-  const updateStep = (stepNumber, steps) => {
-    const newSteps = [...steps];
+  const updateStep = (stepNumber, step) => {
+    const newSteps = [...step];
     let count = 0;
     while (count < newSteps.length) {
       if (count === stepNumber) {
@@ -47,7 +47,7 @@ function Stepper({ steps, currentStep }) {
 
   const displaySteps = newStep.map((step, index) => (
     <div
-      key={index}
+      key={Math.floor(Math.random() * 10000000)}
       className={
             index !== newStep.length - 1
               ? 'w-full flex items-center '
@@ -70,8 +70,9 @@ function Stepper({ steps, currentStep }) {
 
         <div
           className={`h-full  bg-[#664de5] ${
-            step.selected ? 'w-2/4' : step.completed ? 'w-full' : 'w-0'
-          }`}
+            step.selected ? 'w-2/4' : ''
+
+          } ${step.completed ? 'w-full' : 'w-0'}`}
         />
         {/* Display Line */}
       </div>

@@ -22,14 +22,16 @@ function App() {
       case 4:
         return <Congratulations />;
       default:
-        break;
+        return '';
     }
   };
   const handleClick = () => {
     let newStep = currentStep;
     newStep += 1;
 
-    newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
+    if (newStep > 0 && newStep <= steps.length) {
+      setCurrentStep(newStep);
+    }
   };
   return (
     <div className="App h-full font-Inter  flex justify-center items-center w-full min-h-screen">
