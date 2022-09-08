@@ -11,7 +11,7 @@ function Congratulations() {
         <h1 className="text-2xl font-bold text-[#151b28] text-center">
           Congrtulations, Eren!
         </h1>
-        <p className="text-[#6f7b92] font-normal"> We'll streamline your setup experience. </p>
+        <p className="text-[#6f7b92] font-normal"> We&apos;ll streamline your setup experience. </p>
       </section>
     </>
   );

@@ -11,7 +11,7 @@ import Logo from './components/Logo';
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
   const steps = ['Welcome', 'Setup', 'Planning', 'Congratulations'];
-  function displayStep(step) { 
+  const displayStep = (step) => {
     switch (step) {
       case 1:
         return <Welcome />;
@@ -22,14 +22,16 @@ function App() {
       case 4:
         return <Congratulations />;
       default:
-        break;
+        return '';
     }
-  }
+  };
   const handleClick = () => {
     let newStep = currentStep;
     newStep += 1;
 
-    newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
+    if (newStep > 0 && newStep <= steps.length) {
+      setCurrentStep(newStep);
+    }
   };
   return (
     <div className="App h-full font-Inter  flex justify-center items-center w-full min-h-screen">
