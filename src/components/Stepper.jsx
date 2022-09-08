@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
+import Proptypes from 'prop-types';
+
 function Stepper({ steps, currentStep }) {
   const [newStep, setNewStep] = useState([]);
   const stepRef = useRef();
@@ -82,5 +84,11 @@ function Stepper({ steps, currentStep }) {
     </div>
   );
 }
+
+Stepper.propTypes = {
+
+  steps: Proptypes.arrayOf(Proptypes.string).isRequired,
+  currentStep: Proptypes.number.isRequired,
+};
 
 export default Stepper;

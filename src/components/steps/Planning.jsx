@@ -10,7 +10,7 @@ function Planning() {
           How are you Planning to use...
         </h1>
         <p className="text-[#6f7b92] font-normal">
-          We'll streamline your setup experience.
+          We&apos;ll streamline your setup experience.
         </p>
       </section>
       <form className="space-y-4">
